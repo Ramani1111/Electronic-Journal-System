@@ -37,6 +37,9 @@ _______
 CREATE DATABASE journaldb;
 USE journaldb;
 
+
+
+
 -- Users table
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -58,6 +61,8 @@ CREATE TABLE articles (
     FOREIGN KEY (reviewer_id) REFERENCES users(id)
 );
 
+
+
 -- Published Articles table
 CREATE TABLE published_articles (
     article_id INT PRIMARY KEY,
@@ -65,6 +70,8 @@ CREATE TABLE published_articles (
     publish_details VARCHAR(255),
     FOREIGN KEY (article_id) REFERENCES articles(id)
 );
+
+
 
 -- Reviews table
 CREATE TABLE reviews (
@@ -88,6 +95,8 @@ javac -cp .;path/to/mysql-connector-java-8.0.27.jar *.java
 On Linux/macOS:
 CopyRun
 javac -cp .:path/to/mysql-connector-java-8.0.27.jar *.java
+
+
 4. Run the Application
 On Windows:
 CopyRun
